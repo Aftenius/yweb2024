@@ -1,5 +1,13 @@
 site_name: My Static Site
-nav:
-  - Home: index.md
+site_description: A custom static site built with MkDocs
 theme:
-  name: mkdocs
+  name: material
+extra_css:
+  - css/styles.css
+extra_javascript:
+  - js/script.js
+markdown_extensions:
+  - toc
+  - footnotes
+plugins:
+  - minify
