@@ -29,11 +29,3 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./site
-
-      - name: Validate HTML
-        run: |
-          find site -name '*.html' -exec tidy -q -e {} +
-
-        - name: Minify CSS
-        run: |
-          postcss my_theme/css/main.css -o site/css/main.min.css --config postcss.config.js
